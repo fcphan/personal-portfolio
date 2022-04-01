@@ -15,10 +15,10 @@ const Navbar = () => {
       <ul className='app_navbar-links'>
         {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => {
           return (
-            <li className='app_flex p-text' key={`link=${item}`}>
-              <div />
+            <motion.li whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} className='app_flex p-text' key={`link=${item}`}>
+              {/* <div /> */}
               <a href={`#${item}`}>{item}</a>
-            </li>
+            </motion.li>
           )
         })}
       </ul>
@@ -26,14 +26,14 @@ const Navbar = () => {
         <HiMenu onClick={() => setToggle(true)} />
         {
           toggle && (
-            <motion.div whileInView={{ x: [300, 0] }} transition={{ duration: 0.85, ease: 'easeOut' }}>
+            <motion.div whileInView={{ x: [300, 0] }} transition={{ duration: 1, ease: 'easeOut' }}>
               <HiX onClick={() => setToggle(false)} />
               <ul>
                 {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => {
                   return (
-                    <li className='app_flex p-text' key={`sm-link=${item}`}>
+                    <motion.li whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} className='app_flex p-text' key={`sm-link=${item}`}>
                       <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
-                    </li>
+                    </motion.li>
                   )
                 })}
               </ul>
