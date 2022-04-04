@@ -16,7 +16,6 @@ const Navbar = () => {
         {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => {
           return (
             <motion.li whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} className='app_flex p-text' key={`link=${item}`}>
-              {/* <div /> */}
               <a href={`#${item}`}>{item}</a>
             </motion.li>
           )

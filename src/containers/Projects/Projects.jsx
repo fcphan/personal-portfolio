@@ -11,7 +11,7 @@ const Projects = () => {
   useEffect(() => {
     const query = '*[_type == "projects"]'
 
-    client.fetch(query).then((data) => { console.log(data); setProjects(data) })
+    client.fetch(query).then((data) => setProjects(data))
   }, []);
 
   return (
