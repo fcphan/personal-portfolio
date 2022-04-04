@@ -1,25 +1,44 @@
 import React, { useState, useEffect } from 'react'
-import { AiFillEye, AiFillGitHub } from 'react-icons/ai'
+import { AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
+import { urlFor, client } from '../../client'
 import './Projects.scss'
 
 const Projects = () => {
-  const placeholderImg = 'https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc='
-
   const [container, setContainer] = useState({ y: 0, opacity: 1 });
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    const query = '*[_type == "projects"]'
+
+    client.fetch(query).then((data) => { console.log(data); setProjects(data) })
+  }, []);
+
   return (
     <>
       <h2 className='head-text'>My Collection of Projects</h2>
 
       <motion.div className='app_projects-portfolio' animate={container} transition={{ duration: 0.5, delayChildren: 0.5 }}>
-        <div className='app_projects-item app_flex'>
-          <div className='app_projects-img app_flex'>
-            <img src={placeholderImg} alt='placeholder' />
-            <motion.div className='app_project-hover' whileHover={{ opacity: [0, 1] }}>
-              <a href='placeholder' target='_blank' rel='noreferrer' />
-            </motion.div>
-          </div>
-        </div>
+        {projects.map((project, index) => {
+          return (
+            <div className='app_projects-item app_flex' key={index}>
+              <div className='app_projects-img app_flex'>
+                <img src={urlFor(project.image)} alt={project.alt} />
+                <motion.div className='app_projects-hover' whileHover={{ opacity: [0, 1] }} transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}>
+                  <a href={project.link} target='_blank' rel='noreferrer'>
+                    <motion.div className="app_flex" whileInView={{ scale: [0, 1] }} whileHover={{ scale: [1, 0.9] }} transition={{ duration: 0.25 }}>
+                      <AiFillGithub />
+                    </motion.div>
+                  </a>
+                </motion.div>
+              </div>
+              <div className='app_projects-content'>
+                <h4 className='bold-text'>{project.title}</h4>
+                <p className='p-text'>{project.description}</p>
+              </div>
+            </div>
+          )
+        })}
       </motion.div>
     </>
   )

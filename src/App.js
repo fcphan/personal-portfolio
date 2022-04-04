@@ -1,7 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import {About, Footer, Header, Projects, Skills} from './containers'
-import {Navbar} from './components'
+import "./App.css";
+import { About, Footer, Header, Projects, Skills } from "./containers";
+import { Navbar } from "./components";
 
 function App() {
   return (
