@@ -1,0 +1,111 @@
+.app_footer {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app_footer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    margin: 4rem 2rem 2rem;
+
+    .app_footer-card {
+        min-width: 300px;
+        display: flex;
+        flex-direction: flex-start;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: white;
+        transform: all 0.3s ease-in-out;
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin: 0 0.7rem;
+        }
+
+        p {
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--tertiary-color)
+        }
+
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.app_footer-forum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 2rem;
+
+    div {
+        width: 60%;
+        margin: 0.75rem 0;
+        cursor: pointer;
+        background-color: aliceblue;
+        transition: all 0.3s ease-in-out;
+        border-radius: 10px;
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 7px;
+            background-color: white;
+            outline: none;
+        }
+
+        textarea {
+            height: 170px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--tertiary-color);
+        outline: none;
+        margin: 2rem 0 0;
+        cursor: pointer;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+h3 {
+    margin: 3rem 2rem 5rem
+}
