@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { NavWrap } from '../../components'
 import './Header.scss'
 
 const Header = () => {
@@ -30,4 +31,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default NavWrap('Home', Header, 'app_home')

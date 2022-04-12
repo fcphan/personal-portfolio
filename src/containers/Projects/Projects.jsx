@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import { urlFor, client } from '../../client'
+import { NavWrap } from '../../components'
 import './Projects.scss'
 
 const Projects = () => {
@@ -44,4 +45,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default NavWrap('Projects', Projects, 'app_projects')

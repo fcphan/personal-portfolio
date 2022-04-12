@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { urlFor, client } from './../../client'
+import { NavWrap } from '../../components'
 import './Footer.scss'
 
 const Footer = () => {
@@ -71,4 +72,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default NavWrap('Contact', Footer, 'app_footer')

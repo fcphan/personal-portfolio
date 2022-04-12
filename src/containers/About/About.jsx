@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { urlFor, client } from '../../client'
+import { NavWrap } from '../../components'
 import './About.scss'
 
 const About = () => {
@@ -31,4 +32,4 @@ const About = () => {
   )
 }
 
-export default About
+export default NavWrap('About', About, 'app_about')

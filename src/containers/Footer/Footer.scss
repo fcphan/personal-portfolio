@@ -98,9 +98,7 @@
         cursor: pointer;
     }
 
-
-
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 375px) {
         width: 100%;
         margin: 1rem 0;
     }
@@ -108,4 +106,8 @@
 
 h3 {
     margin: 3rem 2rem 5rem
+}
+
+#Contact {
+    scroll-margin-top: 15vh;
 }

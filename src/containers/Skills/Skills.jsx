@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { urlFor, client } from '../../client'
+import { NavWrap } from '../../components'
 import './Skills.scss'
 
 const Skills = () => {
@@ -38,4 +39,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default NavWrap('Skills', Skills, 'app_skills')
