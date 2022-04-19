@@ -42,9 +42,9 @@ const Footer = () => {
       <h2 className='head-text'>Contact Me</h2>
       <div className='app_footer-cards'>
         <div className='app_footer-card'>
-          {icons.map((icon) => {
+          {icons.map((icon, index) => {
             return (
-              <img src={urlFor(icon.image)} alt='email' />
+              <img src={urlFor(icon.image)} alt='email' key={'email-' + index} />
             )
           })}
           <a href='mailto:francis.c.phan@gmail.com' className='p-text'>francis.c.phan@gmail.com</a>
