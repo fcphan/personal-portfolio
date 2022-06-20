@@ -6,26 +6,26 @@ import './Header.scss'
 const Header = () => {
   return (
     <div className='app_header app_flex'>
-      <motion.div className='app_header-info' whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 0.5 }}>
+      <motion.div className='app_header-info' whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5 }}>
         <div className='app_header-badge'>
           <div className='badge-cmp app_flex'>
             <div style={{ marginLeft: 20 }}>
-              <p className='p-text'>Hello, I am</p>
-              <h1 className='head-text'>Francis</h1>
+              <span>
+                <p className='p-text'>Hello, I am</p>
+                <h1 className='head-text'>Francis Phan</h1>
+              </span>
             </div>
           </div>
           <div className='tag-cmp app_flex'>
             <div style={{ marginLeft: 20 }}>
-              <p className='p-text'>Software Engineer</p>
+              <p className='p-text'>I am a Software Engineer and Full Stack Developer.</p>
               <br />
-              <p className='p-text'>Web developer</p>
+              <p className='p-text'>Thanks for visiting my site and checking me out. Hopefully you'll enjoy learning interesting things about me.</p>
+              <br />
+              <p className='p-text'>Feel free to take a look around.</p>
             </div>
           </div>
         </div>
-      </motion.div>
-
-      <motion.div className='app_header-img' whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5, delayChildren: 1 }}>
-        <img src='https://cdn.betterttv.net/emote/5d63e543375afb1da9a68a5a/3x' alt='profile' />
       </motion.div>
     </div>
   )

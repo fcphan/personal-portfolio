@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className='app_navbar'>
       <div>
-        <img className='app_navbar-logo' src='https://cdn.betterttv.net/emote/5d63e543375afb1da9a68a5a/2x' alt='logo' />
+        <h1 className='app_navbar-logo' alt='logo'>FP</h1>
       </div>
       <ul className='app_navbar-links'>
         {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => {

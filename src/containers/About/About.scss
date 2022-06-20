@@ -12,6 +12,36 @@
   margin-top: 2rem;
 }
 
+.app_profile-info {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+
+  .badge-cmp,
+  .tag-cmp {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    border-radius: 15px;
+    flex-direction: row;
+    width: auto;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .tag-cmp {
+    flex-direction: column;
+    margin-top: 3rem;
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
 .app_profile-card {
   width: 190px;
   display: flex;
@@ -43,6 +73,10 @@
       height: 320px;
     }
   }
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 #About {

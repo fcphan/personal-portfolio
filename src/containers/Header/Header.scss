@@ -23,10 +23,10 @@
 }
 
 .app_header-badge {
-  width: 70%;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 
   .badge-cmp,
@@ -46,8 +46,7 @@
 
     p {
       width: 100%;
-      text-transform: uppercase;
-      text-align: right;
+      text-align: center;
     }
   }
 
@@ -60,7 +59,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
 }
