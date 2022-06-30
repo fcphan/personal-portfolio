@@ -22,11 +22,16 @@ const Navbar = () => {
         })}
       </ul>
       <div className='app_navbar-menu'>
-        <HiMenu onClick={() => setToggle(true)} />
+        <motion.p whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+          <HiMenu onClick={() => setToggle(true)} />
+        </motion.p>
         {
           toggle && (
-            <motion.div whileInView={{ x: [300, 0] }} transition={{ duration: 1, ease: 'easeOut' }}>
-              <HiX onClick={() => setToggle(false)} />
+            <motion.div initial={{ opacity: 0 }} whileInView={{ x: [300, 0], opacity: 1 }} transition={{ duration: .3, ease: 'easeOut' }}>
+              <motion.p whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+                <HiX className='HiX' onClick={() => setToggle(false)} />
+              </motion.p>
+
               <ul>
                 {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => {
                   return (
